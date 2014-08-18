@@ -1,0 +1,24 @@
+{
+  "name": "closest",
+  "version": "0.0.1",
+  "description": "Find the closest location",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/niftytushar/closest.git"
+  },
+  "keywords": [
+    "closest",
+    "location"
+  ],
+  "author": "Tushar Agarwal",
+  "license": "Apache 2",
+  "bugs": {
+    "url": "https://github.com/niftytushar/closest/issues"
+  },
+  "homepage": "https://github.com/niftytushar/closest",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-coffee": "^0.11.1"
+  }
+}
