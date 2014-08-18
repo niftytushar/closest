@@ -1,0 +1,22 @@
+{
+  "name": "closest",
+  "version": "0.0.1",
+  "homepage": "https://github.com/niftytushar/closest",
+  "authors": [
+    "Tushar Agarwal <niftytushar@gmail.com>"
+  ],
+  "description": "Find your closest location",
+  "main": "index.html",
+  "keywords": [
+    "location",
+    "closest"
+  ],
+  "license": "Apache 2",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
