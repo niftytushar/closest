@@ -19,6 +19,7 @@
   "homepage": "https://github.com/niftytushar/closest",
   "devDependencies": {
     "grunt": "^0.4.5",
-    "grunt-contrib-coffee": "^0.11.1"
+    "grunt-contrib-coffee": "^0.11.1",
+    "grunt-contrib-compass": "^0.9.1"
   }
 }
