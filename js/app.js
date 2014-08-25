@@ -1,5 +1,5 @@
 (function() {
-  var addMarker, map, mapOptions, _mapDblClick;
+  var map, mapOptions, marker, markerOptions, _mapDblClick;
 
   mapOptions = {
     center: new google.maps.LatLng(-34.397, 150.644),
@@ -9,18 +9,19 @@
 
   map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 
-  _mapDblClick = function() {
-    return alert("Dbl Clicked");
+  markerOptions = {
+    draggable: true,
+    map: map
   };
 
-  addMarker = function(options) {
-    var markerOptions;
-    markerOptions = {
-      position: options.LatLng,
-      draggable: true,
-      map: options.map || null
-    };
-    return google.maps.Marker(markerOptions);
+  marker = new google.maps.Marker(markerOptions);
+
+  google.maps.event.addListener(marker, "position_changed", function() {
+    return alert("Moved");
+  });
+
+  _mapDblClick = function(ev) {
+    return marker.setPosition(ev.latLng);
   };
 
   google.maps.event.addListener(map, "dblclick", _mapDblClick);

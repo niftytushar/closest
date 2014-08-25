@@ -5,15 +5,17 @@ mapOptions =
 
 map = new google.maps.Map document.getElementById("map-canvas"), mapOptions
 
-_mapDblClick = () ->
-	alert "Dbl Clicked"
 
-addMarker = (options) ->
-	markerOptions =
-		position: options.LatLng
+markerOptions =
 		draggable: true
-		map: options.map || null
+		map: map
 
-	google.maps.Marker markerOptions
+marker = new google.maps.Marker markerOptions
 
+google.maps.event.addListener marker, "position_changed", () ->
+		alert "Moved"
+
+_mapDblClick = (ev) ->
+	marker.setPosition ev.latLng
+	
 google.maps.event.addListener map, "dblclick", _mapDblClick
