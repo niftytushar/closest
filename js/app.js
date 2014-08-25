@@ -1,8 +1,6 @@
 (function() {
   var message;
 
-  message = "Hello";
-
-  alert(message);
+  message = "Hello Coffee!";
 
 }).call(this);

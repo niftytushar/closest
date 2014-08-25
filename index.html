@@ -1,12 +1,58 @@
 <!DOCTYPE html>
-
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>Closest</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="stylesheets/screen.css" />
 </head>
+
 <body>
 
-<script type="text/javascript" src="js/app.js"></script>
+    <!-- Begin page content -->
+    <div class="container">
+        <div class="page-header">
+            <h1>Closest</h1>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <form role="form">
+                    <div class="form-group">
+                        <label for="destination">Destination</label>
+                        <input type="text" class="form-control" placeholder="Enter your destination" />
+                    </div>
+
+                    <div class="form-group">
+                    	<label for="">Add waypoints</label>
+                    	<input type="text" class="form-control" placeholder="Start typing your location..." />
+                    </div>
+
+                    <button type="submit" class="btn btn-success btn-block">Find closest location</button>
+                </form>
+            </div>
+
+            <div class="col-lg-8">
+                <div id="map-canvas"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <p class="text-muted">Place sticky footer content here.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Files -->
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
 </body>
+
 </html>
