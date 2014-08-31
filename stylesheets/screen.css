@@ -68,3 +68,8 @@ body {
   width: 100%;
   height: 400px;
 }
+
+/* line 71, ../sass/screen.scss */
+.drop-off-section .input-group {
+  margin-bottom: 5px;
+}

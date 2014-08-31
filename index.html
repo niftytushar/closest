@@ -7,6 +7,7 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="stylesheets/screen.css" />
 </head>
 
@@ -16,28 +17,36 @@
     <div class="container wrap">
         <div class="page-header">
             <h1>Closest</h1>
-            <p>Find the closest location to your destination</p>
+            <p>Find the closest drop off location to your destination</p>
         </div>
 
         <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4">
+            <div class="col-xs-12 col-sm-12 col-md-5 col-lg-4">
                 <form role="form">
                     <div class="form-group">
                         <label for="destination">Destination</label>
-                        <input type="text" class="form-control" placeholder="Enter your destination" />
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Enter your destination" />
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button" title="Use my current location"><i class="fa fa-map-marker"></i></button>
+                            </span>
+                        </div><!-- /input-group -->
                     </div>
 
-                    <div class="form-group">
-                        <label for="">Waypoints</label>
-                        <input type="text" class="form-control" placeholder="Start typing your location..." />
-                        <a href="#">+ Add more</a>
+                    <div class="form-group drop-off-section">
+                        <label for="">Drop off</label>
+                        <div class="__t_drop-offs"></div>
+                        <div>
+                        	<a href="#" id="addDropOff">+ Add more</a>
+                        </div>
                     </div>
 
                     <button type="submit" class="btn btn-success btn-block">Find closest location</button>
                 </form>
             </div>
 
-            <div class="col-xs-12 col-sm-6 col-md-7 col-lg-8">
+            <div class="col-xs-12 col-sm-12 col-md-7 col-lg-8">
+            	<p class="text-muted"><em>Quick Tip: Double click anywhere on map to mark a location.</em></p>
                 <div id="map-canvas"></div>
             </div>
         </div>
