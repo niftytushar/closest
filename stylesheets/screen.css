@@ -73,3 +73,7 @@ body {
 .drop-off-section .input-group {
   margin-bottom: 5px;
 }
+/* line 75, ../sass/screen.scss */
+.drop-off-section a {
+  text-decoration: none;
+}

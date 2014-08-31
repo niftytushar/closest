@@ -1,5 +1,5 @@
 (function() {
-  var addDropOff, createMarker, map, mapOptions, markers, _mapDblClick;
+  var addDropOff, autocomplete, createMarker, map, mapOptions, markers, _onMapDblClick, _onPlaceChanged;
 
   mapOptions = {
     center: new google.maps.LatLng(20.592616, 78.962860),
@@ -28,15 +28,35 @@
     return marker;
   };
 
-  _mapDblClick = function(ev) {
-    return createMarker(ev);
+  _onMapDblClick = function(ev) {
+    var marker;
+    return marker = createMarker(ev);
   };
 
-  google.maps.event.addListener(map, "dblclick", _mapDblClick);
+  google.maps.event.addListener(map, "dblclick", _onMapDblClick);
+
+  autocomplete = new google.maps.places.Autocomplete(document.getElementById("destination"));
+
+  _onPlaceChanged = function() {
+    var place;
+    place = autocomplete.getPlace();
+    if (place.geometry) {
+      map.panTo(place.geometry.location);
+      map.setZoom(15);
+      _onMapDblClick({
+        'latLng': place.geometry.location
+      });
+    } else {
+
+    }
+    return "";
+  };
+
+  google.maps.event.addListener(autocomplete, 'place_changed', _onPlaceChanged);
 
   addDropOff = function(ev) {
     ev && ev.preventDefault();
-    return $(".__t_drop-offs").append("<div class=\"input-group\">\n        <input type=\"text\" class=\"form-control\" placeholder=\"Start typing your location...\" />\n        <span class=\"input-group-btn\">\n            <button class=\"btn btn-default\" type=\"button\" title=\"Use my current location\"><i class=\"fa fa-map-marker\"></i></button>\n        </span>\n    </div><!-- /input-group -->");
+    return $(".__t_drop-offs").append("<div class=\"input-group\">\n	        <input type=\"text\" class=\"form-control\" placeholder=\"Start typing your location...\" />\n	        <span class=\"input-group-btn\">\n	            <button class=\"btn btn-default\" type=\"button\" title=\"Use my current location\"><i class=\"fa fa-map-marker\"></i></button>\n	        </span>\n	    </div><!-- /input-group -->");
   };
 
   addDropOff();
