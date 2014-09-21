@@ -22,13 +22,13 @@
 
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-5 col-lg-4">
-                <form role="form">
+                <form role="form" id="findClosestForm">
                     <div class="form-group">
                         <label for="destination">Destination</label>
                         <div class="input-group">
                             <input type="text" class="form-control" name="destination" id="destination" placeholder="Enter your destination" />
                             <span class="input-group-btn">
-                                <button class="btn btn-default" type="button" title="Use my current location"><i class="fa fa-map-marker"></i></button>
+                                <button class="btn btn-default btn-map-trigger" type="button" title="Use my current location"><i class="fa fa-map-marker"></i></button>
                             </span>
                         </div><!-- /input-group -->
                     </div>
@@ -43,10 +43,12 @@
 
                     <button type="submit" class="btn btn-success btn-block">Find closest location</button>
                 </form>
+
+                <p id="result"></p>
             </div>
 
-            <div class="col-xs-12 col-sm-12 col-md-7 col-lg-8">
-            	<p class="text-muted"><em>Quick Tip: Double click anywhere on map to mark a location.</em></p>
+            <div class="col-xs-12 col-sm-12 col-md-7 col-lg-8 col-right">
+            	<p class="text-muted f12"><em>Quick Tip: Double click anywhere on map to mark a location.</em></p>
                 <div id="map-canvas"></div>
             </div>
         </div>
@@ -59,7 +61,7 @@
         <div class="footer">
             <div class="container">
                 <div class="content">
-                    <p class="license">This work is licensed under the <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC By-SA 3.0</a>, without all the cruft that would otherwise be put at the bottom of the page.</p>
+                    <p class="license f12">This work is licensed under the <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC By-SA 3.0</a>, without all the cruft that would otherwise be put at the bottom of the page.</p>
                 </div>
             </div>
         </div>
@@ -68,7 +70,7 @@
     <!-- JS Files -->
     <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAiHcIW9G_ZaSD1Qa4eOTZez7HDcUf8J9M"></script>
     <script type="text/javascript" src="js/app.js"></script>
 </body>
 

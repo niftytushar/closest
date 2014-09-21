@@ -12,7 +12,7 @@
   display: inline-block;
   height: 100%;
   vertical-align: middle;
-  margin-right: -0.25em; /* Adjusts for spacing */
+  margin-right: -0.50em; /* Adjusts for spacing */
 }
 
 html {
@@ -22,6 +22,12 @@ html {
 
 body {
   height: 100%;
+  color: #3e3e3e;
+  min-width: 320px;
+}
+
+.f12 {
+  font-size: 12px;
 }
 
 .wrap {
@@ -59,6 +65,17 @@ body {
   .license {
     display: inline-block;
     vertical-align: middle;
+  }
+}
+
+.btn-map-trigger {
+  background-color: #f2f2f2;
+  color: #515151;
+}
+
+.col-right {
+  @media (max-width: 992px) {
+    margin-top: 20px;
   }
 }
 
