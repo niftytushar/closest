@@ -39,18 +39,25 @@ removeAllMarkers = () ->
 
 # Map double click handler
 _onMapDblClick = (ev) ->
-	# Check if a marker should added
-	
+	###
+		A marker should always be added
+		If destination is already set, add the location as drop off location
+	###
+
 	# Check destination marker
 	ev.isDestination = true if not markers.destination
 
 	# Check drop-off locations marker
+	markers.dropOff[ev.position].setMap(null) if ev.position isnt null and typeof ev.position isnt "undefined" and markers.dropOff[ev.position]?
 
 	# Attempt to create a marker
 	marker = createMarker ev
 
 	# Save this marker for future use
-	if ev.isDestination then markers.destination = marker else markers.dropOff.push marker
+	if ev.isDestination then markers.destination = marker
+	else
+		if ev.position then markers.dropOff[ev.position] = marker
+		else markers.dropOff.push marker
 	
 google.maps.event.addListener map, "dblclick", _onMapDblClick
 
@@ -68,7 +75,7 @@ _onPlaceChanged = () ->
 		map.setZoom 15
 
 		# Do some search / marker adding here
-		_onMapDblClick { 'latLng': place.geometry.location, 'isDestination': if (this._type is 1) then true else false }
+		_onMapDblClick { 'latLng': place.geometry.location, 'isDestination': (if (this._type is 1) then true else false), 'position': this._position }
 	else
 		# Wanna do something else here? Go ahead.
 
@@ -93,6 +100,8 @@ addDropOff = (ev) ->
 	_autocomplete = new google.maps.places.Autocomplete $dropOff.find("input[type='text']:last")[0]
 	# Type 2 autocomplete indicates drop off location
 	_autocomplete._type = 2
+	# Save position of input to bind with autocomplete
+	_autocomplete._position = $dropOff.find("input[type='text']:last").index()
 
 	# Register place changed / selected handler
 	google.maps.event.addListener _autocomplete, 'place_changed', _onPlaceChanged

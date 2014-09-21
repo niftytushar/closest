@@ -45,15 +45,27 @@
   };
 
   _onMapDblClick = function(ev) {
+
+    /*
+    		A marker should always be added
+    		If destination is already set, add the location as drop off location
+     */
     var marker;
     if (!markers.destination) {
       ev.isDestination = true;
+    }
+    if (ev.position !== null && typeof ev.position !== "undefined" && (markers.dropOff[ev.position] != null)) {
+      markers.dropOff[ev.position].setMap(null);
     }
     marker = createMarker(ev);
     if (ev.isDestination) {
       return markers.destination = marker;
     } else {
-      return markers.dropOff.push(marker);
+      if (ev.position) {
+        return markers.dropOff[ev.position] = marker;
+      } else {
+        return markers.dropOff.push(marker);
+      }
     }
   };
 
@@ -71,7 +83,8 @@
       map.setZoom(15);
       _onMapDblClick({
         'latLng': place.geometry.location,
-        'isDestination': this._type === 1 ? true : false
+        'isDestination': (this._type === 1 ? true : false),
+        'position': this._position
       });
     } else {
 
@@ -87,6 +100,7 @@
     $dropOff = $(".__t_drop-offs").append("<div class=\"input-group\">\n	        <input type=\"text\" class=\"form-control\" placeholder=\"Start typing your location...\" />\n	        <span class=\"input-group-btn\">\n	            <button class=\"btn btn-default btn-map-trigger\" type=\"button\" title=\"Use my current location\"><i class=\"fa fa-map-marker\"></i></button>\n	        </span>\n	    </div><!-- /input-group -->");
     _autocomplete = new google.maps.places.Autocomplete($dropOff.find("input[type='text']:last")[0]);
     _autocomplete._type = 2;
+    _autocomplete._position = $dropOff.find("input[type='text']:last").index();
     google.maps.event.addListener(_autocomplete, 'place_changed', _onPlaceChanged);
     return "";
   };
