@@ -194,7 +194,8 @@ h1 {
 }
 .form-destination {
   margin-top: 50px;
+  .input-group-lg {
+    border: 10px solid rgba(225,225,225,0.3);
+    border-radius: 5px;
+  }
 }
-
-
-
