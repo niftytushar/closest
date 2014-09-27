@@ -5,8 +5,30 @@
 
 //@import "compass/reset";
 
+$primary-bg: #F1F1F1;
 /* Sticky footer styles
 -------------------------------------------------- */
+
+// modules
+// utility: vertical centering 
+// vertical align middle
+.vam {
+  text-align: center;
+  &:before {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+      margin-right: -0.25em; /* Adjusts for spacing */
+  }
+  /* The element to be centered, can
+   also be of any width and height */
+  .centered  {
+      display: inline-block;
+      vertical-align: middle;
+      width: 300px;
+  }
+}
 %vertical-align:before {
   content: '';
   display: inline-block;
@@ -21,14 +43,57 @@ html {
 }
 
 body {
+  font: {
+    size: 16px;
+    family: lato;
+    weight: 400;
+    style: normal;
+  }
   height: 100%;
   color: #3e3e3e;
   min-width: 320px;
+  background-color: $primary-bg;
+}
+
+h1 {
+  font: {
+    size: 52px;
+    family: lato;
+    weight: 400;
+    style: normal;
+  }
+}
+
+.slogan {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  line-height: 60px;
+  font: {
+    size: 60px;
+    family: raleway;
+    style: normal;
+    weight: 900;
+  }
+  &:after {
+    content: '';
+    border-bottom: 4px solid #e2e2e2;
+    display: block;
+    width: 25%;
+    margin: 50px auto;
+  }
+}
+.welcome-desc {
+  font: {
+    size: 34px;
+    family: raleway;
+    style: normal;
+    weight: 200;
+  }  
 }
 
 .f12 {
   font-size: 12px;
-}
+};
 
 .wrap {
   height: auto;
@@ -91,5 +156,46 @@ body {
 
   a {
     text-decoration: none;
+  }
+}
+
+// welcome 
+.section-welcome {
+  background-image: url(../img/banner-traffic.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: relative;
+  &:after {
+    background-image: url(../img/pattern.png);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+  }
+  .container {
+    width: 960px;
+  }
+  .text-center {
+    position: absolute;
+    z-index: 1000;
+  }
+  .welcome-content {
+    h1 {
+      margin-bottom: 30px;
+    }
+    color: #fff;
+    padding: 50px;
+  }
+}
+.form-destination {
+  margin-top: 50px;
+  .input-group-lg {
+    border: 10px solid rgba(225,225,225,0.3);
+    border-radius: 5px;
   }
 }
