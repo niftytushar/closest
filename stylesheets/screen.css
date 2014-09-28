@@ -2,9 +2,100 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@font-face {
+  font-family: "icons";
+  src: url("../build/fonts/icons-5f231b40abf239f3ab90e2e3899e1d62.eot");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "icons";
+  src: url("../build/fonts/icons-5f231b40abf239f3ab90e2e3899e1d62.eot");
+  src: url("../build/fonts/icons-5f231b40abf239f3ab90e2e3899e1d62.eot?#iefix") format("embedded-opentype"), url("../build/fonts/icons-5f231b40abf239f3ab90e2e3899e1d62.woff") format("woff"), url("../build/fonts/icons-5f231b40abf239f3ab90e2e3899e1d62.ttf") format("truetype"), url("../build/fonts/icons-5f231b40abf239f3ab90e2e3899e1d62.svg?#icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 22, ../build/fonts/_icons.scss */
+.icon {
+  font-family: "icons";
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  font-weight: normal;
+  font-style: normal;
+  speak: none;
+  text-decoration: inherit;
+  text-transform: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 41, ../build/fonts/_icons.scss */
+.icon_icon-add:before {
+  content: "\f101";
+}
+
+/* line 46, ../build/fonts/_icons.scss */
+.icon_icon-building:before {
+  content: "\f102";
+}
+
+/* line 51, ../build/fonts/_icons.scss */
+.icon_icon-busstand:before {
+  content: "\f103";
+}
+
+/* line 56, ../build/fonts/_icons.scss */
+.icon_icon-castle:before {
+  content: "\f104";
+}
+
+/* line 61, ../build/fonts/_icons.scss */
+.icon_icon-city:before {
+  content: "\f105";
+}
+
+/* line 66, ../build/fonts/_icons.scss */
+.icon_icon-destination-home:before {
+  content: "\f106";
+}
+
+/* line 71, ../build/fonts/_icons.scss */
+.icon_icon-destination:before {
+  content: "\f107";
+}
+
+/* line 76, ../build/fonts/_icons.scss */
+.icon_icon-logo:before {
+  content: "\f108";
+}
+
 /* Sticky footer styles
 -------------------------------------------------- */
-/* line 10, ../sass/screen.scss */
+/* line 16, ../sass/screen.scss */
+.vam {
+  text-align: center;
+  /* The element to be centered, can
+   also be of any width and height */
+}
+/* line 18, ../sass/screen.scss */
+.vam:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em;
+  /* Adjusts for spacing */
+}
+/* line 27, ../sass/screen.scss */
+.vam .centered {
+  display: inline-block;
+  vertical-align: middle;
+  width: 300px;
+}
+
+/* line 33, ../sass/screen.scss */
 .footer .content:before {
   content: '';
   display: inline-block;
@@ -14,32 +105,74 @@
   /* Adjusts for spacing */
 }
 
-/* line 18, ../sass/screen.scss */
+/* line 41, ../sass/screen.scss */
 html {
   position: relative;
   height: 100%;
 }
 
-/* line 23, ../sass/screen.scss */
+/* line 46, ../sass/screen.scss */
 body {
+  font-size: 16px;
+  font-family: lato;
+  font-weight: 400;
+  font-style: normal;
   height: 100%;
   color: #3e3e3e;
   min-width: 320px;
+  background-color: #F1F1F1;
 }
 
-/* line 29, ../sass/screen.scss */
+/* line 59, ../sass/screen.scss */
+h1 {
+  font-size: 52px;
+  font-family: lato;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* line 68, ../sass/screen.scss */
+.slogan {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  line-height: 60px;
+  font-size: 60px;
+  font-family: raleway;
+  font-style: normal;
+  font-weight: 900;
+}
+/* line 78, ../sass/screen.scss */
+.slogan:after {
+  content: '';
+  border: 4px solid rgba(255, 255, 255, 0.5);
+  display: block;
+  width: 25%;
+  margin: 50px auto;
+  height: 10px;
+  border-radius: 2px;
+}
+
+/* line 88, ../sass/screen.scss */
+.welcome-desc {
+  font-size: 34px;
+  font-family: raleway;
+  font-style: normal;
+  font-weight: 200;
+}
+
+/* line 97, ../sass/screen.scss */
 .f12 {
   font-size: 12px;
 }
 
-/* line 33, ../sass/screen.scss */
+/* line 101, ../sass/screen.scss */
 .wrap {
   height: auto;
   min-height: 100%;
   margin: 0 auto -60px;
 }
 
-/* line 39, ../sass/screen.scss */
+/* line 107, ../sass/screen.scss */
 .footer-push, .footer {
   position: relative;
   width: 100%;
@@ -47,53 +180,131 @@ body {
   height: 60px;
 }
 
-/* line 46, ../sass/screen.scss */
+/* line 114, ../sass/screen.scss */
 .footer {
   background-color: #f5f5f5;
 }
-/* line 50, ../sass/screen.scss */
+/* line 118, ../sass/screen.scss */
 .footer .container {
   height: 100%;
 }
-/* line 54, ../sass/screen.scss */
+/* line 122, ../sass/screen.scss */
 .footer .content {
   height: 100%;
   text-align: center;
 }
-/* line 60, ../sass/screen.scss */
+/* line 128, ../sass/screen.scss */
 .footer .content p {
   margin: 0;
 }
-/* line 65, ../sass/screen.scss */
+/* line 133, ../sass/screen.scss */
 .footer .license {
   display: inline-block;
   vertical-align: middle;
 }
 
-/* line 71, ../sass/screen.scss */
+/* line 139, ../sass/screen.scss */
 .btn-map-trigger {
   background-color: #f2f2f2;
   color: #515151;
 }
 
 @media (max-width: 992px) {
-  /* line 76, ../sass/screen.scss */
+  /* line 144, ../sass/screen.scss */
   .col-right {
     margin-top: 20px;
   }
 }
 
-/* line 82, ../sass/screen.scss */
+/* line 150, ../sass/screen.scss */
 #map-canvas {
   width: 100%;
   height: 400px;
 }
 
-/* line 88, ../sass/screen.scss */
+/* line 156, ../sass/screen.scss */
 .drop-off-section .input-group {
   margin-bottom: 5px;
 }
-/* line 92, ../sass/screen.scss */
+/* line 160, ../sass/screen.scss */
 .drop-off-section a {
   text-decoration: none;
+}
+
+/* line 166, ../sass/screen.scss */
+.section-welcome {
+  background-image: url(../img/banner-traffic.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: relative;
+}
+/* line 173, ../sass/screen.scss */
+.section-welcome:after {
+  background-image: url(../img/pattern.png);
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+/* line 183, ../sass/screen.scss */
+.section-welcome .container {
+  width: 960px;
+}
+/* line 186, ../sass/screen.scss */
+.section-welcome .text-center {
+  position: absolute;
+  z-index: 1000;
+}
+/* line 190, ../sass/screen.scss */
+.section-welcome .welcome-content {
+  color: #fff;
+  padding: 50px;
+}
+/* line 191, ../sass/screen.scss */
+.section-welcome .welcome-content h1 {
+  margin-bottom: 30px;
+}
+
+/* line 198, ../sass/screen.scss */
+.form-destination {
+  margin-top: 50px;
+}
+/* line 200, ../sass/screen.scss */
+.form-destination .input-group-lg {
+  border: 10px solid rgba(225, 225, 225, 0.3);
+  border-radius: 5px;
+}
+/* line 205, ../sass/screen.scss */
+.form-destination .input-group-btn .btn {
+  border-radius: 0px !important;
+}
+/* line 211, ../sass/screen.scss */
+.form-destination .input-group input:hover, .form-destination .input-group input:active, .form-destination .input-group input:focus {
+  border: 1px solid #ccc !important;
+  box-shadow: none !important;
+}
+/* line 216, ../sass/screen.scss */
+.form-destination .input-group .form-control {
+  border-radius: 0px !important;
+}
+
+/* line 221, ../sass/screen.scss */
+.brand {
+  font-size: 100px;
+  line-height: 0px;
+}
+
+/* line 226, ../sass/screen.scss */
+.process-module div {
+  display: inline-block;
+}
+
+/* line 231, ../sass/screen.scss */
+.process i {
+  font-size: 100px;
 }
