@@ -33,7 +33,7 @@ module.exports = function(grunt) {
                 dest: 'build/fonts',
                 options: {
                     stylesheet: 'scss',
-                    relativeFontPath: 'sass/icon-fonts/icons'
+                    relativeFontPath: '../build/fonts'
                 }
             }
         }//webfont

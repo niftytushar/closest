@@ -4,6 +4,7 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 //@import "compass/reset";
+@import "../build/fonts/_icons";
 
 $primary-bg: #F1F1F1;
 /* Sticky footer styles
@@ -195,9 +196,41 @@ h1 {
   }
 }
 .form-destination {
-  margin-top: 50px;
-  .input-group-lg {
-    border: 10px solid rgba(225,225,225,0.3);
-    border-radius: 5px;
-  }
+    margin-top: 50px;
+    .input-group-lg {
+        border: 10px solid rgba(225,225,225,0.3);
+        border-radius: 5px;
+    }
+    .input-group-btn {
+      .btn {
+        border-radius: 0px!important;
+      }
+    }
+    .input-group {
+        input {
+            &:hover, &:active, &:focus {
+                border: 1px solid #ccc!important;
+                box-shadow: none!important;
+            }
+        }
+      .form-control {
+        border-radius: 0px!important;
+      }
+    }
+}
+.brand {
+    font-size: 100px;
+    line-height: 0px;
+}
+.process-module {
+    div {
+        display: inline-block;
+    }
+}
+.process {
+    i {
+        font: {
+            size: 100px;
+        }
+    }
 }
