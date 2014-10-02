@@ -16,7 +16,7 @@ $primary-bg: #F1F1F1;
 .vam {
   text-align: center;
   &:before {
-      content: '';
+      content: ''; 
       display: inline-block;
       height: 100%;
       vertical-align: middle;
