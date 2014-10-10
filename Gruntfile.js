@@ -72,6 +72,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
 
     // Default task(s).
-    grunt.registerTask('default', ['coffee', 'compass']);
+    grunt.registerTask('default', ['coffee', 'compass', 'processhtml', 'uncss', 'copy']);
 
 };
