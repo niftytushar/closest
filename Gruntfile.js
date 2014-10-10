@@ -27,16 +27,6 @@ module.exports = function(grunt) {
                 tasks: ['coffee']
             }
         },//watch
-        webfont: {
-            icons: {
-                src: 'dev/icons/*.svg',
-                dest: 'build/fonts',
-                options: {
-                    stylesheet: 'scss',
-                    relativeFontPath: '../build/fonts'
-                }
-            }
-        },//webfont
         uncss: {
           dist: {
             files: {
@@ -71,9 +61,6 @@ module.exports = function(grunt) {
 
     // Load the plugin that provides the "watch" task
     grunt.loadNpmTasks('grunt-contrib-watch');
-
-    // Load the plugin that provides the "webfont" task
-    grunt.loadNpmTasks('grunt-webfont');
 
     // Load the plugin that provides the "uncss" task
     grunt.loadNpmTasks('grunt-uncss');
