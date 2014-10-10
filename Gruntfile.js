@@ -36,7 +36,31 @@ module.exports = function(grunt) {
                     relativeFontPath: '../build/fonts'
                 }
             }
-        }//webfont
+        },//webfont
+        uncss: {
+          dist: {
+            files: {
+              'stylesheets/tidy.css': ['index.html']
+            }
+          }
+        },//uncss
+        processhtml: {
+            dist: {
+              files: {
+                'index2.html': ['index.html']
+              }
+            }
+        },//processhtml
+        copy: {
+          main: {
+            files: [
+                {expand: true, cwd: 'bower_components/fontawesome/fonts/', src: ['**'], dest: 'fonts/'},
+            ]
+
+          }
+        }//copy
+        
+        
     });
 
     // Load the plugin that provides the "coffee" task.
@@ -51,6 +75,14 @@ module.exports = function(grunt) {
     // Load the plugin that provides the "webfont" task
     grunt.loadNpmTasks('grunt-webfont');
 
+    // Load the plugin that provides the "uncss" task
+    grunt.loadNpmTasks('grunt-uncss');
+
+    // Load the plugin that provides the "processhtml" task
+    grunt.loadNpmTasks('grunt-processhtml');
+
+    // Load the plugin that provides the "contribcopy" task
+    grunt.loadNpmTasks('grunt-contrib-copy');
 
     // Default task(s).
     grunt.registerTask('default', ['coffee', 'compass']);
