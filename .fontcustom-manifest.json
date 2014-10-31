@@ -1,0 +1,76 @@
+{
+  "checksum": {
+    "previous": "26a70ed635549090fdd80519442a95c7d6a14b952388861af34eec8e73d36c3d",
+    "current": "26a70ed635549090fdd80519442a95c7d6a14b952388861af34eec8e73d36c3d"
+  },
+  "fonts": [
+    "fonts/icon-fonts_26a70ed635549090fdd80519442a95c7.ttf",
+    "fonts/icon-fonts_26a70ed635549090fdd80519442a95c7.svg",
+    "fonts/icon-fonts_26a70ed635549090fdd80519442a95c7.woff",
+    "fonts/icon-fonts_26a70ed635549090fdd80519442a95c7.eot"
+  ],
+  "glyphs": {
+    "icon-add": {
+      "codepoint": 61696,
+      "source": "dev/icons/icon-add.svg"
+    },
+    "icon-building": {
+      "codepoint": 61697,
+      "source": "dev/icons/icon-building.svg"
+    },
+    "icon-busstand": {
+      "codepoint": 61698,
+      "source": "dev/icons/icon-busstand.svg"
+    },
+    "icon-castle": {
+      "codepoint": 61699,
+      "source": "dev/icons/icon-castle.svg"
+    },
+    "icon-city": {
+      "codepoint": 61700,
+      "source": "dev/icons/icon-city.svg"
+    },
+    "icon-destination": {
+      "codepoint": 61701,
+      "source": "dev/icons/icon-destination.svg"
+    },
+    "icon-destination-home": {
+      "codepoint": 61702,
+      "source": "dev/icons/icon-destination-home.svg"
+    },
+    "icon-logo": {
+      "codepoint": 61703,
+      "source": "dev/icons/icon-logo.svg"
+    }
+  },
+  "options": {
+    "autowidth": false,
+    "config": "fontcustom.yml",
+    "css_selector": ".icon-{{glyph}}",
+    "debug": false,
+    "font_name": "icon-fonts",
+    "force": false,
+    "input": {
+      "templates": "sass/partials",
+      "vectors": "dev/icons"
+    },
+    "no_hash": false,
+    "output": {
+      "css": "sass/partials",
+      "fonts": "fonts",
+      "preview": "fonts",
+      "scss": "sass/partials"
+    },
+    "preprocessor_path": "",
+    "quiet": false,
+    "skip_first": false,
+    "templates": [
+      "scss",
+      "preview"
+    ]
+  },
+  "templates": [
+    "sass/partials/_icon-fonts.scss",
+    "fonts/icon-fonts-preview.html"
+  ]
+}

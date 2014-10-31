@@ -1,0 +1,246 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* Sticky footer styles
+-------------------------------------------------- */
+/* line 14, ../sass/screen.scss */
+.vam {
+  text-align: center;
+  /* The element to be centered, can
+   also be of any width and height */
+}
+/* line 16, ../sass/screen.scss */
+.vam:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em;
+  /* Adjusts for spacing */
+}
+/* line 25, ../sass/screen.scss */
+.vam .centered {
+  display: inline-block;
+  vertical-align: middle;
+  width: 300px;
+}
+
+/* line 31, ../sass/screen.scss */
+.footer .content:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.50em;
+  /* Adjusts for spacing */
+}
+
+/* line 39, ../sass/screen.scss */
+html {
+  position: relative;
+  height: 100%;
+}
+
+/* line 44, ../sass/screen.scss */
+body {
+  font-size: 16px;
+  font-family: lato;
+  font-weight: 400;
+  font-style: normal;
+  height: 100%;
+  color: #3e3e3e;
+  min-width: 320px;
+  background-color: #F1F1F1;
+}
+
+/* line 57, ../sass/screen.scss */
+h1 {
+  font-size: 52px;
+  font-family: lato;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* line 66, ../sass/screen.scss */
+.slogan {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  line-height: 60px;
+  font-size: 60px;
+  font-family: raleway;
+  font-style: normal;
+  font-weight: 900;
+}
+/* line 76, ../sass/screen.scss */
+.slogan:after {
+  content: '';
+  border: 4px solid rgba(255, 255, 255, 0.5);
+  display: block;
+  width: 25%;
+  margin: 50px auto;
+  height: 10px;
+  border-radius: 2px;
+}
+
+/* line 86, ../sass/screen.scss */
+.welcome-desc {
+  font-size: 34px;
+  font-family: raleway;
+  font-style: normal;
+  font-weight: 200;
+}
+
+/* line 95, ../sass/screen.scss */
+.f12 {
+  font-size: 12px;
+}
+
+/* line 99, ../sass/screen.scss */
+.wrap {
+  height: auto;
+  min-height: 100%;
+  margin: 0 auto -60px;
+}
+
+/* line 105, ../sass/screen.scss */
+.footer-push, .footer {
+  position: relative;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+}
+
+/* line 112, ../sass/screen.scss */
+.footer {
+  background-color: #f5f5f5;
+}
+/* line 116, ../sass/screen.scss */
+.footer .container {
+  height: 100%;
+}
+/* line 120, ../sass/screen.scss */
+.footer .content {
+  height: 100%;
+  text-align: center;
+}
+/* line 126, ../sass/screen.scss */
+.footer .content p {
+  margin: 0;
+}
+/* line 131, ../sass/screen.scss */
+.footer .license {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* line 137, ../sass/screen.scss */
+.btn-map-trigger {
+  background-color: #f2f2f2;
+  color: #515151;
+}
+
+@media (max-width: 992px) {
+  /* line 142, ../sass/screen.scss */
+  .col-right {
+    margin-top: 20px;
+  }
+}
+
+/* line 148, ../sass/screen.scss */
+#map-canvas {
+  width: 100%;
+  height: 400px;
+}
+
+/* line 154, ../sass/screen.scss */
+.drop-off-section .input-group {
+  margin-bottom: 5px;
+}
+/* line 158, ../sass/screen.scss */
+.drop-off-section a {
+  text-decoration: none;
+}
+
+/* line 164, ../sass/screen.scss */
+.section-welcome {
+  background-image: url(../img/banner-traffic.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: relative;
+}
+/* line 171, ../sass/screen.scss */
+.section-welcome:after {
+  background-image: url(../img/pattern.png);
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+/* line 181, ../sass/screen.scss */
+.section-welcome .container {
+  width: 960px;
+}
+/* line 184, ../sass/screen.scss */
+.section-welcome .text-center {
+  position: absolute;
+  z-index: 1000;
+}
+/* line 188, ../sass/screen.scss */
+.section-welcome .welcome-content {
+  color: #fff;
+  padding: 50px;
+}
+/* line 189, ../sass/screen.scss */
+.section-welcome .welcome-content h1 {
+  margin-bottom: 30px;
+}
+
+/* line 196, ../sass/screen.scss */
+.form-destination {
+  margin-top: 50px;
+}
+/* line 198, ../sass/screen.scss */
+.form-destination .input-group-lg {
+  border: 10px solid rgba(225, 225, 225, 0.3);
+  border-radius: 5px;
+}
+/* line 203, ../sass/screen.scss */
+.form-destination .input-group-btn .btn {
+  border-radius: 0px !important;
+}
+/* line 209, ../sass/screen.scss */
+.form-destination .input-group input:hover, .form-destination .input-group input:active, .form-destination .input-group input:focus {
+  border: 1px solid #ccc !important;
+  box-shadow: none !important;
+}
+/* line 214, ../sass/screen.scss */
+.form-destination .input-group .form-control {
+  border-radius: 0px !important;
+}
+
+/* line 219, ../sass/screen.scss */
+.brand {
+  font-size: 100px;
+  line-height: 0px;
+}
+
+/* line 224, ../sass/screen.scss */
+.process-module div {
+  display: inline-block;
+}
+
+/* line 229, ../sass/screen.scss */
+.process i {
+  font-size: 100px;
+}
+
+/* line 236, ../sass/screen.scss */
+svg path {
+  fill: #fff !important;
+}

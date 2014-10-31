@@ -48,8 +48,28 @@ module.exports = function(grunt) {
             ]
 
           }
-        }//copy
-        
+        },//copy
+        patternprimer: {
+            my_target: {
+                wwwroot: '/',
+                src: 'dev/patterns',    
+                css: ['stylesheets/screen.css'],
+                dest: 'patterns',
+                snapshot: true      
+            }
+        },//patternprimer
+        kss: {
+            options: {
+              includeType: 'sass',
+              includePath: 'kss/style/scss/style.scss',
+              template: 'kss/template',
+            },
+            dist: {
+                files: {
+                  'styleguide': ['kss/style/scss']
+                }
+            }
+        }        
         
     });
 
@@ -70,6 +90,12 @@ module.exports = function(grunt) {
 
     // Load the plugin that provides the "contribcopy" task
     grunt.loadNpmTasks('grunt-contrib-copy');
+
+    // Load the plugin that provides the "patternprimer" task
+    grunt.loadNpmTasks('grunt-patternprimer');
+
+    // Load the plugin that provides the "kss" task
+    grunt.loadNpmTasks('grunt-kss');
 
     // Default task(s).
     grunt.registerTask('default', ['coffee', 'compass', 'processhtml', 'uncss', 'copy']);
